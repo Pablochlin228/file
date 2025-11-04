@@ -40,7 +40,6 @@ public:
 		{
 			out << name << ' ' << surname << ' ' << age << endl;
 			out.close();
-			cout << "Student " << name << " saved to Text.txt!" << endl;
 		}
 		else
 		{
@@ -57,19 +56,18 @@ public:
 
 		if (in.is_open())
 		{
-			/*while (in >> n >> s >> a)
+			while (in >> n >> s >> a)
 			{
 				cout << n << ' ' << s << ' ' << a << endl;
 			}
-			*/
-			in >> n >> s >> a;
+			
+			/*in >> n >> s >> a;
 
 			cout << n << endl;
 			cout << s << endl;
-			cout << a << endl;
+			cout << a << endl;*/
 
 			in.close();
-			cout << "Read file" << endl;
 		}
 		else
 		{
@@ -81,7 +79,7 @@ public:
 
 int main()
 {
-	Student obj1("Pavel", "Ivanov", 19);
+	Student obj1("Pavel", "Sigma", 34);
 	//Student obj2("Pavel", "Cherkasov", 17);
 
 	obj1.SaveFile();
