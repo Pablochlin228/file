@@ -34,7 +34,7 @@ public:
 	//------------- HW
 	void SaveFile() 
 	{
-		ofstream out("Example.txt");
+		ofstream out("Text.txt");
 
 		if (out.is_open())
 		{
@@ -47,7 +47,28 @@ public:
 		}
 
 	} 
-	void LoadFile() {} // ����� ���� ���������
+	void LoadFile() 
+	{
+		ifstream in("Text.txt");
+		string n;
+		string s;
+		int a;
+
+		if (in.is_open())
+		{
+			in >> n >> s >> a;
+
+			cout << n << endl;
+			cout << s << endl;
+			cout << a << endl;
+
+			in.close();
+		}
+		else
+		{
+		      cout << "Could not open the file" << endl;
+		}
+	} 
 
 };
 
@@ -55,11 +76,8 @@ int main()
 {
 	Student obj1("Ivan", "Ivanov", 19);
 
-	// �������� ��������� ������
-
-
-
-
+	obj1.SaveFile();
+	obj1.LoadFile();
 
 }
 
