@@ -60,13 +60,6 @@ public:
 			{
 				cout << n << ' ' << s << ' ' << a << endl;
 			}
-			
-			/*in >> n >> s >> a;
-
-			cout << n << endl;
-			cout << s << endl;
-			cout << a << endl;*/
-
 			in.close();
 		}
 		else
@@ -79,12 +72,9 @@ public:
 
 int main()
 {
-	Student obj1("Pavel", "Sigma", 34);
-	//Student obj2("Pavel", "Cherkasov", 17);
+	Student obj1("Pavel", "Cherk", 22);
 
 	obj1.SaveFile();
-	//obj2.SaveFile();
-
 	obj1.LoadFile();
 }
 
